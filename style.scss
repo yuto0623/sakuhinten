@@ -221,6 +221,9 @@ body {
               font-size: unquote("max(8px, 1vw)");
               a {
                 color: white;
+                &:hover {
+                  opacity: 0.8;
+                }
               }
             }
           }

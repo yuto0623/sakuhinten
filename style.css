@@ -292,6 +292,9 @@ body footer ul li .footer_menu {
   body footer ul li .footer_menu li a {
     color: white;
   }
+  body footer ul li .footer_menu li a:hover {
+    opacity: 0.8;
+  }
 }
 
 body footer ul li a {
