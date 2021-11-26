@@ -1,0 +1,79 @@
+@mixin pc {
+  @media screen and (min-width: 600px) {
+    @content;
+  }
+}
+
+body {
+  main {
+    .bg1 {
+      background-image: url(img/onkyo.jpg);
+    }
+    .bg2 {
+      background-image: url(img/onkyo.jpg);
+    }
+    .bg3 {
+      background-image: url(img/onkyo.jpg);
+    }
+    .bg4 {
+      background-image: url(img/onkyo.jpg);
+    }
+    .courseBg {
+      background-clip: border-box;
+      background-position: center;
+      background-size: cover;
+      background-repeat: no-repeat;
+      width: 100vw;
+      height: 600px;
+      position: relative;
+      .left {
+        @include pc {
+          left: 0;
+        }
+      }
+      .left {
+        @include pc {
+          right: 0;
+          left: auto;
+        }
+      }
+      .courseBox {
+        backdrop-filter: blur(8px);
+        color: white;
+        position: absolute;
+        width: 100vw;
+        bottom: 0;
+        letter-spacing: 3px;
+        line-height: 1.6;
+        padding-bottom: 30px;
+        @include pc {
+          width: 40vw;
+          height: 100%;
+          padding-bottom: 0;
+        }
+        h1 {
+          text-align: center;
+          font-size: 3rem;
+          margin: 0 20px;
+          @include pc {
+            margin: 40px;
+            font-size: 4vw;
+          }
+        }
+        ul {
+          @include pc {
+            margin-left: 5vw;
+            font-size: 1.8vw;
+            font-size: unquote("min(1.8vw, 1.5rem)");
+          }
+        }
+        p {
+          margin: 0 3vw;
+          @include pc {
+            margin: 70px 3vw;
+          }
+        }
+      }
+    }
+  }
+}

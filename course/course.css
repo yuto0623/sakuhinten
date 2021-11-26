@@ -1,0 +1,90 @@
+body main .bg1 {
+  background-image: url(img/onkyo.jpg);
+}
+
+body main .bg2 {
+  background-image: url(img/onkyo.jpg);
+}
+
+body main .bg3 {
+  background-image: url(img/onkyo.jpg);
+}
+
+body main .bg4 {
+  background-image: url(img/onkyo.jpg);
+}
+
+body main .courseBg {
+  background-clip: border-box;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  width: 100vw;
+  height: 600px;
+  position: relative;
+}
+
+@media screen and (min-width: 600px) {
+  body main .courseBg .left {
+    left: 0;
+  }
+}
+
+@media screen and (min-width: 600px) {
+  body main .courseBg .left {
+    right: 0;
+    left: auto;
+  }
+}
+
+body main .courseBg .courseBox {
+  -webkit-backdrop-filter: blur(8px);
+          backdrop-filter: blur(8px);
+  color: white;
+  position: absolute;
+  width: 100vw;
+  bottom: 0;
+  letter-spacing: 3px;
+  line-height: 1.6;
+  padding-bottom: 30px;
+}
+
+@media screen and (min-width: 600px) {
+  body main .courseBg .courseBox {
+    width: 40vw;
+    height: 100%;
+    padding-bottom: 0;
+  }
+}
+
+body main .courseBg .courseBox h1 {
+  text-align: center;
+  font-size: 3rem;
+  margin: 0 20px;
+}
+
+@media screen and (min-width: 600px) {
+  body main .courseBg .courseBox h1 {
+    margin: 40px;
+    font-size: 4vw;
+  }
+}
+
+@media screen and (min-width: 600px) {
+  body main .courseBg .courseBox ul {
+    margin-left: 5vw;
+    font-size: 1.8vw;
+    font-size: min(1.8vw, 1.5rem);
+  }
+}
+
+body main .courseBg .courseBox p {
+  margin: 0 3vw;
+}
+
+@media screen and (min-width: 600px) {
+  body main .courseBg .courseBox p {
+    margin: 70px 3vw;
+  }
+}
+/*# sourceMappingURL=course.css.map */

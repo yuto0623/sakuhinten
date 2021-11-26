@@ -8,6 +8,7 @@ body main {
 
 body main h1 {
   padding-top: 40px;
+  font-size: 3rem;
 }
 
 body main .gmap {
@@ -31,5 +32,9 @@ body main .gmap iframe {
   left: 0;
   width: 100%;
   height: 100%;
+}
+
+body main .address p {
+  font-size: 1.5rem;
 }
 /*# sourceMappingURL=access.css.map */

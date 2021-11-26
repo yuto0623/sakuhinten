@@ -36,14 +36,26 @@ body main .h2 p {
 
 body main .text {
   margin: 0 5vw;
-  letter-spacing: 1px;
-  line-height: 1.3;
+  letter-spacing: 3px;
+  line-height: 1.6;
+}
+
+@media screen and (min-width: 600px) {
+  body main .text {
+    margin: 0 20vw;
+  }
 }
 
 body main .works {
   position: relative;
   width: 100vw;
   margin-bottom: -3px;
+}
+
+@media screen and (min-width: 600px) {
+  body main .works {
+    margin-bottom: 0px;
+  }
 }
 
 body main .works .poster_sp {
