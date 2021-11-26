@@ -89,6 +89,10 @@ body main .works .works_button {
   padding: 5px;
 }
 
+body main .works .works_button a {
+  text-decoration: none;
+}
+
 body main .works .works_button:hover {
   opacity: 0.8;
 }
