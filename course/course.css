@@ -7,7 +7,7 @@ body main .bg2 {
 }
 
 body main .bg3 {
-  background-image: url(img/onkyo.jpg);
+  background-image: url(img/design.png);
 }
 
 body main .bg4 {
@@ -41,6 +41,7 @@ body main .courseBg .courseBox {
   -webkit-backdrop-filter: blur(8px);
           backdrop-filter: blur(8px);
   color: white;
+  text-shadow: 1px 1px 0 black;
   position: absolute;
   width: 100vw;
   bottom: 0;
