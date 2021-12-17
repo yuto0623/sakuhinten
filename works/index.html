@@ -12,6 +12,28 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@300&display=swap" rel="stylesheet">
+  <!-- jQuery.jsの読み込み -->
+  <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.3.2/jquery.min.js"></script>
+
+  <!-- スムーズスクロール部分の記述 -->
+  <script>
+    $(function () {
+      // #で始まるアンカーをクリックした場合に処理
+      $('a[href^=#]').click(function () {
+        // スクロールの速度
+        var speed = 400; // ミリ秒
+        // アンカーの値取得
+        var href = $(this).attr("href");
+        // 移動先を取得
+        var target = $(href == "#" || href == "" ? 'html' : href);
+        // 移動先を数値で取得
+        var position = target.offset().top;
+        // スムーススクロール
+        $('body,html').animate({ scrollTop: position }, speed, 'swing');
+        return false;
+      });
+    });
+  </script>
   <title>Document</title>
 </head>
 
@@ -68,22 +90,80 @@
       <h3 class="home-h3">WORKS</h3>
       <p id="midashi-P">作品一覧</p>
       <div class="menuButton" id="galleryMenuButton">
-        <a href="#">
-          <img src="img/tagIcon.svg" class="svg">
-        </a>
+        <img src="img/tagIcon.svg" class="svg">
       </div>
       <div id="galleryMenu">
         <ul>
           <li>
-            <a>
-              aaaaaaaaa
+            <a href="#poster">
+              作品展ポスター
+            </a>
+          </li>
+          <li>
+            <a href="#naka">
+              中吊り広告
+            </a>
+          </li>
+          <li>
+            <a href="#50Icon">
+              50 icon's 構成学
+            </a>
+          </li>
+          <li>
+            <a href="#zasshi">
+              雑誌
+            </a>
+          </li>
+          <li>
+            <a href="#line">
+              LINEスタンプ
+            </a>
+          </li>
+          <li>
+            <a href="#kankou">
+              観光ポスター
+            </a>
+          </li>
+          <li>
+            <a href="#book">
+              ブックカバー
+            </a>
+          </li>
+          <li>
+            <a href="#cd">
+              CDジャケット
+            </a>
+          </li>
+          <li>
+            <a href="#package">
+              パッケージデザイン
+            </a>
+          </li>
+          <li>
+            <a href="#scene">
+              SCENE
+            </a>
+          </li>
+          <li>
+            <a href="#okashi">
+              お菓子
+            </a>
+          </li>
+          <li>
+            <a href="#tenbyou">
+              点描
+            </a>
+          </li>
+          <li>
+            <a href="#3dcg">
+              3DCGアニメーション
             </a>
           </li>
         </ul>
       </div>
     </section>
     <section>
-      <h4 class="home-h4"><a name="poster">ポスター</a></h4>
+      <h4 class="home-h4 anchor" id="poster"><a name="poster">ポスター</a></h4>
       <div class="hes-gallery" data-wrap="false" data-img-count="false">
         <img src="img/1.jpg" alt="image1" data-subtext="1年グラフィックデザインコース">
         <img src="img/2.jpg" alt="image1" data-subtext="1年グラフィックデザインコース">
@@ -151,7 +231,7 @@
       </div>
     </section>
     <section>
-      <h4 class="home-h4"><a name="nakazurikoukoku">中吊り広告</a></h4>
+      <h4 class="home-h4 anchor" id="naka"><a name="nakazurikoukoku">中吊り広告</a></h4>
       <div class="hes-gallery" data-wrap="false" data-img-count="false">
         <img src="img/60.jpg" alt="image1" data-subtext="2年グラフィックデザインコース">
         <img src="img/61.jpg" alt="image2" data-subtext="2年グラフィックデザインコース">
@@ -189,7 +269,7 @@
       </div>
     </section>
     <section>
-      <h4 class="home-h4"><a name="kousei">50 icon's 構成学</a></h4>
+      <h4 class="home-h4 anchor" id="50Icon"><a name="kousei">50 icon's 構成学</a></h4>
       <div class="hes-gallery" data-wrap="false" data-img-count="false">
         <img src="img/1a.jpg" alt="image1" data-subtext="2年グラフィックデザインコース">
         <img src="img/2a.jpg" alt="image1" data-subtext="2年グラフィックデザインコース">
@@ -197,7 +277,7 @@
       </div>
     </section>
     <section>
-      <h4 class="home-h4"><a name="magazine">雑誌</a></h4>
+      <h4 class="home-h4 anchor" id="zasshi"><a name="magazine">雑誌</a></h4>
       <div class="hes-gallery" data-wrap="false" data-img-count="false">
         <img src="img/1zw.jpg" alt="image1" data-subtext="2年Webデザインコース">
         <img src="img/2zw.jpg" alt="image2" data-subtext="2年Webデザインコース">
@@ -228,7 +308,7 @@
       </div>
     </section>
     <section>
-      <h4 class="home-h4"><a name="LINE">LINEスタンプ</a></h4>
+      <h4 class="home-h4 anchor" id="line"><a name="LINE">LINEスタンプ</a></h4>
       <div class="hes-gallery" data-wrap="false" data-img-count="false">
         <img src="img/line1.jpg" alt="image1" data-subtext="2年グラフィックデザインコース">
         <img src="img/line2.jpg" alt="image2" data-subtext="2年グラフィックデザインコース">
@@ -260,18 +340,30 @@
       </div>
     </section>
     <section>
-      <h4 class="home-h4"><a name="kankou">観光ポスター</a></h4>
+      <h4 class="home-h4 anchor" id="kankou"><a name="kankou">観光ポスター</a></h4>
       <div class="hes-gallery" data-wrap="false" data-img-count="false">
         <img src="img/Medium_観光.jpg" alt="image1" data-subtext="2年グラフィックデザインコース">
     </section>
     <section>
-      <h4 class="home-h4"><a name="kuruma">車広告</a></h4>
+      <h4 class="home-h4 anchor" id="book"><a name="book">ブックカバー</a></h4>
       <div class="hes-gallery" data-wrap="false" data-img-count="false">
         <img src="img/1kg.jpg" alt="image1" data-subtext="1年グラフィックデザインコース">
       </div>
     </section>
     <section>
-      <h4 class="home-h4"><a name="SCENE">SCENE</a></h4>
+      <h4 class="home-h4 anchor" id="cd"><a name="cd">CDジャケット</a></h4>
+      <div class="hes-gallery" data-wrap="false" data-img-count="false">
+        <img src="img/1kg.jpg" alt="image1" data-subtext="1年グラフィックデザインコース">
+      </div>
+    </section>
+    <section>
+      <h4 class="home-h4 anchor" id="package"><a name="book">パッケージデザイン</a></h4>
+      <div class="hes-gallery" data-wrap="false" data-img-count="false">
+        <img src="img/1kg.jpg" alt="image1" data-subtext="1年グラフィックデザインコース">
+      </div>
+    </section>
+    <section>
+      <h4 class="home-h4 anchor" id="scene"><a name="SCENE">SCENE</a></h4>
       <div class="hes-gallery" data-wrap="false" data-img-count="false">
         <img src="img/1gs.jpg" alt="image1" data-subtext="1年グラフィックデザインコース">
         <img src="img/13ws.jpg" alt="image2" data-subtext="1年グラフィックデザインコース">
@@ -298,13 +390,13 @@
       </div>
     </section>
     <section>
-      <h4 class="home-h4"><a name="okashi">お菓子</a></h4>
+      <h4 class="home-h4 anchor" id="okashi"><a name="okashi">お菓子</a></h4>
       <div class="hes-gallery" data-wrap="false" data-img-count="false">
         <img src="img/Medium1g.jpg" alt="image1" data-subtext="1年グラフィックデザインコース">
       </div>
     </section>
     <section>
-      <h4 class="home-h4"><a name="tenbyou">点描</a></h4>
+      <h4 class="home-h4 anchor" id="tenbyou"><a name="tenbyou">点描</a></h4>
       <div class="hes-gallery" data-wrap="false" data-img-count="false">
         <img src="img/ten1.jpg" alt="image1">
         <img src="img/ten2.jpg" alt="image1">
@@ -343,7 +435,7 @@
       </div>
     </section>
     <section>
-      <h4 class="home-h4"><a name="3DCGanimation">3DCGアニメーション</a></h4>
+      <h4 class="home-h4 anchor" id="3dcg"><a name="3DCGanimation">3DCGアニメーション</a></h4>
       <div class="topContentsBox">
         <div class="topInfoBox">
           <div class="map2">
