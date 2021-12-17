@@ -285,14 +285,41 @@ p {
 }
 
 /* ジャンルへアクセス*/
-
-/* スムーススクロールボタン */
-#page-top {
-  padding: 1em;
-  max-width: 10em;
-  width: 5em;
-  float: right;
+.menuButton {
   position: fixed;
-  bottom: 9em;
-  right: 3em;
+  height: 80px;
+  width: 80px;
+  background-color: #000;
+  right: 2vw;
+  bottom: 3vh;
+  border-radius: 50%;
+  z-index: 999;
+}
+
+.svg {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  height: 47px;
+  width: 47px;
+}
+
+.svg path {
+  stroke: #fff;
+}
+
+#galleryMenu {
+  position: fixed;
+  height: 100vh;
+  width: 200px;
+  background-color: black;
+  color: white;
+  right: -200px;
+  top: 70px;
+  z-index: 998;
+}
+
+#galleryMenu.clicked {
+  right: 0;
 }
